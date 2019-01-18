@@ -1,15 +1,43 @@
-<h1>당신의 입력 텍스트는 {{total}}   로 구성되어 있습니다.</h1>
-<br>
-<a href="{% url 'home'%}">다시하기</a>
-<br>
-<h2> 입력한 텍스트 : </h2>
-{{full}}
-<!-- 텍스트수 -->
+<!DOCTYPE html>
+<html lang="en">
 
-<h2> 단어 카운트 : </h2>
+<head>
+    <!-- jquery 코드 삽입 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>Result</strong></h1>
+
+        <p class="bg-success">당신의 입력 텍스트는 <strong>{{total}}</strong> (으)로 구성되어 있습니다.</p>
+<p class="bg-info">입력한 텍스트 : </p>
+{{full}}
+
+<p class="bg-warning">단어 카운트 : </p>
 {% for word, number in dictionary%}
 {{word}} : {{number}} <br>
 
 {% endfor%}
-{{dictionary}}
+       
+        <br>
+        <a href="{% url 'home'%}">다시하기</a>
+        <br>
+        
+     
+    </div>
+</body>
+
 <!-- 단어 -->
+
+</html>

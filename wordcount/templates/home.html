@@ -1,9 +1,41 @@
-<h1> 안녕하세요 Home입니다~~ </h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<a href="{%url 'about'%}">About</a>
+<head>
+    <!-- jquery 코드 삽입 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<form action="{%url 'result'%}">
-    <textarea name="fulltext" cols="40" rows="10"></textarea>
-    <br>
-    <input type="submit" value="count!">
-</form>
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container">
+        <h1> <strong>WordCount</strong> </h1>
+
+
+        <a href="{%url 'about'%}">About</a>
+
+
+        <form action="{%url 'result'%}">
+            <div class="form-group has-success">
+                <label class="control-label" for="inputSuccess1">문장을 입력해주세요!</label>
+                <textarea name="fulltext" cols="40" rows="10" type="text" class="form-control" id="inputSuccess1"></textarea>
+            </div>
+            <!-- <textarea name="fulltext" cols="40" rows="10"></textarea> -->
+            <br>
+
+            <button type="submit" class="btn btn-primary"> submit </button>
+        </form>
+    </div>
+</body>
+
+
+</html>
